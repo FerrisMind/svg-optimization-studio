@@ -1,0 +1,31 @@
+# CODEOWNERS file
+# Отвечает за автоматическое назначение ревьюеров для PR
+
+# Global owners - автоматически назначаются на все PR
+* @FerrisMind
+
+# Documentation - только Product Owner может изменять документацию
+/docs/ @FerrisMind
+*.md @FerrisMind
+
+# Configuration files - критичные конфигурационные файлы
+/.github/ @FerrisMind
+/Cargo.toml @FerrisMind
+/tauri.conf.json @FerrisMind
+/package.json @FerrisMind
+
+# Source code areas (будет расширено по мере роста команды)
+/src-tauri/ @FerrisMind
+/src/ @FerrisMind
+
+# Tests - все члены команды могут ревьюить тесты
+/tests/ @FerrisMind
+**/*test* @FerrisMind
+**/*spec* @FerrisMind
+
+# CI/CD - только майнтейнеры могут изменять CI
+/.github/workflows/ @FerrisMind
+
+# Security sensitive files
+/.github/dependabot.yml @FerrisMind
+/SECURITY.md @FerrisMind
